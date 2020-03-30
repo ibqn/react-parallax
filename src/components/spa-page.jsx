@@ -12,7 +12,7 @@ const ParallaxLayer1 = styled(ParallaxLayer)`
   justify-content: center;
 `
 
-const SpaPage = () => {
+function SpaPage() {
   const refParallax = useRef()
 
   const jumpTo = page => refParallax.current.scrollTo(page)
