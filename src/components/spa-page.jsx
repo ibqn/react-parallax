@@ -37,7 +37,11 @@ function SpaPage() {
         speed={-0.3}
         style={{ pointerEvents: "none" }}
       >
-        <img src={satellite4} style={{ width: "10%", marginLeft: "80%" }} />
+        <img
+          src={satellite4}
+          alt="satellite"
+          style={{ width: "10%", marginLeft: "80%" }}
+        />
       </ParallaxLayer>
 
       <ParallaxLayer
@@ -48,7 +52,7 @@ function SpaPage() {
       />
 
       <ParallaxLayer1 offset={0} speed={0.1} onClick={() => jumpTo(1)}>
-        <img src={server} style={{ width: "20%" }} />
+        <img src={server} alt="server" style={{ width: "20%" }} />
       </ParallaxLayer1>
 
       <ParallaxLayer
@@ -61,7 +65,7 @@ function SpaPage() {
           justifyContent: "center",
         }}
       >
-        <img src={bash} style={{ width: "40%" }} />
+        <img src={bash} alt="bash shell" style={{ width: "40%" }} />
       </ParallaxLayer>
 
       <ParallaxLayer
@@ -74,7 +78,11 @@ function SpaPage() {
         }}
         onClick={() => jumpTo(0)}
       >
-        <img src={clientsMain} style={{ width: "40%" }} />
+        <img
+          src={clientsMain}
+          alt="main client shell"
+          style={{ width: "40%" }}
+        />
       </ParallaxLayer>
     </Parallax>
   )
