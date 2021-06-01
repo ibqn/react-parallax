@@ -1,8 +1,9 @@
 import React, { useRef } from "react"
-import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons"
+import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 import server from "./server.svg"
 import bash from "./bash.svg"
 import stars from "./stars.svg"
+import satellite4 from "./satellite4.svg"
 import clientsMain from "./clients-main.svg"
 import styled from "styled-components"
 
@@ -15,10 +16,10 @@ const ParallaxLayer1 = styled(ParallaxLayer)`
 function SpaPage() {
   const refParallax = useRef()
 
-  const jumpTo = page => refParallax.current.scrollTo(page)
+  const jumpTo = (page) => refParallax.current.scrollTo(page)
 
   return (
-    <Parallax pages={3} ref={ref => (refParallax.current = ref)}>
+    <Parallax pages={3} ref={(ref) => (refParallax.current = ref)}>
       <ParallaxLayer
         offset={1}
         speed={1}
@@ -30,6 +31,14 @@ function SpaPage() {
         speed={1}
         style={{ backgroundColor: "#87BCDE" }}
       />
+
+      <ParallaxLayer
+        offset={1.3}
+        speed={-0.3}
+        style={{ pointerEvents: "none" }}
+      >
+        <img src={satellite4} style={{ width: "10%", marginLeft: "80%" }} />
+      </ParallaxLayer>
 
       <ParallaxLayer
         offset={0}
